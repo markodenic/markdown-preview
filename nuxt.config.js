@@ -27,6 +27,7 @@ export default {
     'normalize.css/normalize.css',
     'codemirror/lib/codemirror.css',
     'github-markdown-css/github-markdown.css',
+    'highlight.js/styles/github.css',
     '@/assets/less/app.less'
   ],
 

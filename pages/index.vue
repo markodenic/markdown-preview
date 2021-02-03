@@ -97,7 +97,9 @@ This is an \`inline code\`.
 
   computed: {
     codeOutput () {
-      return marked(DOMPurify.sanitize(this.code))
+      return marked(DOMPurify.sanitize(this.code), {
+        highlight: code => require('highlight.js').highlightAuto(code).value
+      })
     }
   },
 
