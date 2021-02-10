@@ -10,6 +10,7 @@ html{
   --black: #100e17;
   --orange: #ff8a00;
   --green: #4fc08d;
+  --red: #e14440;
   font-family: monospace;
   ::selection{
     background: var(--orange);
@@ -27,9 +28,25 @@ html{
     color: var(--orange);
     text-decoration-color: var(--green);
   }
-  .markdown-editor, .markdown-body {
+  .button {
+    border: 0;
+    min-height: 30px;
+    color: white;
+    cursor: pointer;
+    outline: 0;
+    background-color: var(--green);
+    min-width: 100px;
+    transition: background-color .4s;
+    &--red {
+      background-color: var(--red);
+    }
+  }
+  .actions {
+    border-bottom: 1px solid var(--black);
+  }
+  .markdown-editor, .markdown-body__wrapper {
     width: 50%;
-    height: calc(100vh - 117px);
+    height: calc(100vh - 174px);
     overflow: auto;
   }
   .markdown-editor {

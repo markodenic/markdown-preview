@@ -1,10 +1,30 @@
 <template>
-  <div class="flex">
-    <div class="markdown-editor">
-      <textarea :id="id" v-model="code" />
+  <div>
+    <div class="actions text-center p-3">
+      <button
+        class="button button--red"
+        @click="clear"
+      >
+        clear
+      </button>
+
+      <button
+        class="button"
+        @click="copy"
+      >
+        copy
+      </button>
     </div>
 
-    <div class="markdown-body" v-html="codeOutput" />
+    <div class="flex">
+      <div class="markdown-editor">
+        <textarea :id="id" v-model="code" />
+      </div>
+
+      <div class="markdown-body__wrapper">
+        <div class="markdown-body" v-html="codeOutput" />
+      </div>
+    </div>
   </div>
 </template>
 
@@ -118,6 +138,20 @@ This is an \`inline code\`.
 
       this.codemirror.on('change', (cm) => {
         this.code = cm.getValue()
+      })
+    },
+    clear () {
+      this.codemirror.doc.setValue('')
+    },
+    copy () {
+      if (!navigator.clipboard) {
+        // Clipboard API not available
+        alert('It looks like you can\' use this button! Please, copy the code with CTRL + C / CMD + C!')
+      }
+      navigator.clipboard.writeText(this.code).then(() => {
+        // Copied to clipboard
+      }, () => {
+        alert('It looks like you can\' use this button! Please, copy the code with CTRL + C / CMD + C!')
       })
     }
   }
