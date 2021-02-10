@@ -69,12 +69,25 @@ export default {
 
 ### Code Block
 
-\`\`\`
-{
-  "firstName": "Marko",
-  "lastName": "Denic",
-  "twitterHandle": "denicmarko"
-}
+\`\`\`html
+<article class="forecast">
+  <h1>Weather forecast for San Francisco</h1>
+
+  <article class="daily-forecast">
+    <h2>11. February 2021</h2>
+    <p>Sunny.</p>
+  </article>
+
+  <article class="daily-forecast">
+    <h2>12. February 2021</h2>
+    <p>Sunny.</p>
+  </article>
+
+  <article class="daily-forecast">
+    <h2>13. February 2021</h2>
+    <p>Sunny.</p>
+  </article>
+</article>
 \`\`\`
 
 ### Inline Code
