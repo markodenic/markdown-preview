@@ -1,9 +1,9 @@
 <template>
   <footer class="text-center">
     <p>
-      Made by <a href="https://markodenic.com">Marko Denic</a> with <a href="https://nuxtjs.org">Nuxt.js</a>.
+      Made by <a href="https://markodenic.com">Marko</a> with Nuxt.js.
       <br>
-      Hosted on <a href="https://vercel.com/">Vercel</a>. Code on <a href="https://github.com/MarkoDenic/markdown-preview">GitHub</a>.
+      Hosted on Vercel. Code on <a href="https://github.com/MarkoDenic/markdown-preview">GitHub</a>.
     </p>
   </footer>
 </template>
